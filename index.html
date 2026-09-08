@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | IT Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/skull.png">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#top" aria-label="Jim's portfolio home">&lt;JIM /&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="top">
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">IT SUPPORT SPECIALIST</p>
+            <h1>Hi, I'm <span class="highlight">Jim.</span></h1>
+            <h2>IT Support Specialist</h2>
+            <p class="hero-statement"><span class="typing-text" data-words="I am passionate about leveraging practical skills to optimize performance.|I solve real-world problems with reliable IT solutions.|I deliver meaningful, high-impact results." aria-live="polite">I am passionate about leveraging practical skills to optimize performance.</span><span class="typing-cursor" aria-hidden="true">|</span></p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <p>
+                I am a fresh BSIT graduate with a solid foundation in system administration, software architecture, and IT service management, I am eager to apply my technical knowledge and build efficient, secure IT solutions for real-world business needs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light reveal">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                <h3>Operating Systems</h3>
+                <p>Comfortable working with Windows and Linux environments, including system setup, configuration, user support, and routine maintenance.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+                <h3>Networking Fundamentals</h3>
+                <p>Knowledge of network devices, IP addressing, basic connectivity, and troubleshooting common wired and wireless network issues.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                <h3>Hardware Deployment &amp; Troubleshooting</h3>
+                <p>Capable of preparing, installing, diagnosing, and maintaining computer hardware, peripherals, and basic workstation setups.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database" aria-hidden="true"></i>
+                <h3>Database &amp; Data Basics</h3>
+                <p>Familiar with database concepts, structured data, basic queries, and organizing information accurately for everyday IT needs.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <h3>Cybersecurity Awareness</h3>
+                <p>Understand safe computing practices, password security, phishing awareness, access control, and the importance of protecting data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="systems" aria-pressed="false">Systems</button>
+            <button class="filter-btn" type="button" data-filter="security" aria-pressed="false">Security</button>
+            <button class="filter-btn" type="button" data-filter="process" aria-pressed="false">Process</button>
+        </div>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <article class="project-card" data-category="systems process">
+                <div class="project-info">
+                    <h3>Subscription Package Management System</h3>
+                    <p>Designed end-to-end architecture including BPMN diagrams, tiered feature access structures, and Level 0/1 DFD models for a multi-tenant SaaS application.</p>
+                    <div class="tags">
+                        <span>System Design</span>
+                        <span>BPMN</span>
+                        <span>SaaS</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" data-category="systems security">
+                <div class="project-info">
+                    <h3>Active Directory & GPO Hardening</h3>
+                    <p>Configured domain-wide Group Policy Objects (GPOs), RBAC controls, and integrated hybrid identities with Azure AD to enhance endpoint security.</p>
+                    <div class="tags">
+                        <span>Active Directory</span>
+                        <span>Windows Server</span>
+                        <span>Security</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" data-category="process">
+                <div class="project-info">
+                    <h3>ERP & Workflow Process Redesign</h3>
+                    <p>Analyzed enterprise resource planning workflows, identifying bottlenecks and applying Lean/Six Sigma frameworks to streamline operational efficiency.</p>
+                    <div class="tags">
+                        <span>ERP</span>
+                        <span>Process Optimization</span>
+                        <span>ITSM</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Experience / Certifications -->
+    <section id="experience" class="section bg-light reveal">
+        <h2 class="section-title">Experience & Focus</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>IT Systems & Operations Analyst</h3>
+                <span class="timeline-date">2024 - Present</span>
+                <p>Managing server infrastructure, optimizing enterprise IT workflows, and implementing security posture improvements across endpoints.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Certifications & Core Knowledge</h3>
+                <span class="timeline-date">Ongoing</span>
+                <ul>
+                    <li>CompTIA Security+ / Network+ (or your specific certs)</li>
+                    <li>ITIL 4 Foundation / IT Service Management</li>
+                    <li>Enterprise Systems & Cloud Integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-sub">Interested in working together or have a question? Feel free to reach out!</p>
+        <div class="contact-links">
+            <a href="mailto:jimuelancajas14@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Email Me</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/jimzxc123" target="_blank" class="contact-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Jimuel Ancajas | 2026. Built with HTML & CSS.</p>
+    </footer>
+
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
