@@ -60,7 +60,7 @@ header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--l
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes statement-glow { 50% { color: var(--accent); text-shadow: 0 0 24px var(--accent-glow); } }
 .hero-btns { display: flex; justify-content: center; flex-wrap: wrap; gap: .85rem; }
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: .7rem 1.15rem; border: 1px solid var(--line); border-radius: .75rem; font-weight: 750; text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .7rem 1.15rem; border: 1px solid var(--line); border-radius: .75rem; font-weight: 750; text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s; }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 0 15px var(--accent-glow); }
 .primary { color: var(--text-inverse); border-color: transparent; background: linear-gradient(135deg, var(--accent-green), var(--accent-2)); }
 .secondary { background: var(--surface); color: var(--text); backdrop-filter: blur(12px); }
@@ -107,5 +107,5 @@ footer { padding: 2rem 1.25rem; border-top: 1px solid var(--line); color: var(--
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
 :focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
-@media (max-width: 760px) { .nav-links li:not(:last-child) { display: none; } .skills-grid, .projects-grid { grid-template-columns: 1fr; } .skill-card, .skill-card:nth-child(n) { grid-column: auto; } }
+@media (max-width: 760px) { .nav-links li:not(:last-child):not(:nth-last-child(2)) { display: none; } .nav-links { gap: .5rem; } .skills-grid, .projects-grid { grid-template-columns: 1fr; } .skill-card, .skill-card:nth-child(n) { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
