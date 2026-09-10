@@ -110,9 +110,34 @@
         });
     };
 
+    const setupNavigation = () => {
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        if (!toggle || !links) return;
+
+        const closeMenu = () => {
+            links.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        toggle.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        links.addEventListener('click', (event) => {
+            if (event.target.closest('a')) closeMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 700) closeMenu();
+        });
+    };
+
     updatePortfolioTheme();
     window.updatePortfolioTheme = updatePortfolioTheme;
     setupReveals();
     setupTyping();
     setupProjectFilters();
+    setupNavigation();
 })();
