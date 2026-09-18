@@ -30,6 +30,15 @@ a { color: inherit; }
 button { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
+/* Announcement bar: the message has the flexible column, while the close control
+   keeps a usable touch target and never gets pushed beyond the viewport. */
+.announcement-bar { border-bottom: 1px solid var(--line); background: var(--accent-dim); }
+.announcement-bar__inner { width: min(var(--content-width), calc(100% - 2.5rem)); min-height: 3.25rem; margin: auto; display: grid; grid-template-columns: minmax(0, 1fr) 2.75rem; align-items: center; gap: .75rem; }
+.announcement-bar__message { display: flex; align-items: center; gap: .6rem; min-width: 0; color: var(--text); font-size: clamp(.82rem, 1.7vw, .95rem); font-weight: 650; line-height: 1.35; overflow-wrap: anywhere; }
+.announcement-bar__message i { flex: 0 0 auto; color: var(--accent); }
+.announcement-bar__close { display: grid; width: 2.75rem; height: 2.75rem; place-items: center; justify-self: end; cursor: pointer; border: 0; border-radius: .65rem; background: transparent; color: var(--text); font-size: 1rem; }
+.announcement-bar__close:hover, .announcement-bar__close:focus-visible { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent); }
+
 /* Navigation */
 header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--page) 78%, transparent); backdrop-filter: blur(18px); }
 .navbar { width: min(var(--content-width), calc(100% - 2.5rem)); min-height: 4.5rem; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
@@ -122,6 +131,9 @@ footer { padding: 2rem 1.25rem; border-top: 1px solid var(--line); color: var(--
 @media (max-width: 700px) {
     html { scroll-padding-top: 4.5rem; }
     .navbar { position: relative; width: min(100% - 2rem, var(--content-width)); min-height: 4rem; }
+    .announcement-bar__inner { width: min(100% - 2rem, var(--content-width)); grid-template-columns: minmax(0, 1fr) 2.5rem; gap: .5rem; }
+    .announcement-bar__message { padding-block: .55rem; }
+    .announcement-bar__close { width: 2.5rem; height: 2.5rem; }
     .nav-toggle { display: grid; }
     .nav-links { position: absolute; top: calc(100% + .5rem); right: 0; left: 0; display: none; align-items: stretch; gap: .25rem; padding: .75rem; border: 1px solid var(--line); border-radius: .85rem; background: color-mix(in srgb, var(--bg-primary) 96%, transparent); box-shadow: var(--shadow); }
     .nav-links.is-open { display: grid; }
