@@ -140,6 +140,7 @@
         if (!announcement || !closeButton) return;
 
         closeButton.addEventListener('click', () => {
+            // The hidden attribute removes the bar at every breakpoint, including mobile and tablet.
             announcement.hidden = true;
         });
     };
