@@ -134,10 +134,21 @@
         });
     };
 
+    const setupAnnouncementBar = () => {
+        const announcement = document.querySelector('.announcement-bar');
+        const closeButton = announcement?.querySelector('.announcement-bar__close');
+        if (!announcement || !closeButton) return;
+
+        closeButton.addEventListener('click', () => {
+            announcement.hidden = true;
+        });
+    };
+
     updatePortfolioTheme();
     window.updatePortfolioTheme = updatePortfolioTheme;
     setupReveals();
     setupTyping();
     setupProjectFilters();
     setupNavigation();
+    setupAnnouncementBar();
 })();
